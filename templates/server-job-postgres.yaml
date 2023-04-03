@@ -57,7 +57,7 @@ spec:
             - name: SQL_HOST
               value: {{ $.Values.server.config.persistence.default.sql.host }}
             - name: SQL_PORT
-              value: {{ $.Values.server.config.persistence.default.sql.port }}
+              value: {{ $.Values.server.config.persistence.default.sql.port | quote }}
             - name: SQL_USER
               value: {{ $.Values.server.config.persistence.default.sql.user }}
             - name: SQL_PASSWORD
@@ -73,7 +73,7 @@ spec:
             - name: SQL_HOST
               value: {{ $.Values.server.config.persistence.default.sql.host }}
             - name: SQL_PORT
-              value: {{ $.Values.server.config.persistence.default.sql.port }}
+              value: {{ $.Values.server.config.persistence.default.sql.port | quote }}
             - name: SQL_USER
               value: {{ $.Values.server.config.persistence.default.sql.user }}
             - name: SQL_PASSWORD
@@ -158,7 +158,7 @@ spec:
             - name: SQL_HOST
               value: {{ $.Values.server.config.persistence.default.sql.host }}
             - name: SQL_PORT
-              value: {{ $.Values.server.config.persistence.default.sql.port }}
+              value: {{ $.Values.server.config.persistence.default.sql.port | quote }}
             - name: SQL_USER
               value: {{ $.Values.server.config.persistence.default.sql.user }}
             - name: SQL_PASSWORD
